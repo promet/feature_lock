@@ -8,7 +8,7 @@
 /**
  * Implements hook_kw_manifests_info().
  */
-function features_lock_kw_manifests_info() {
+function feature_lock_kw_manifests_info() {
   return array(
     'features_lock_components' => array(
       'callback' => 'p2pi_search_main_lock_features',
@@ -21,13 +21,13 @@ function features_lock_kw_manifests_info() {
     ),
   );
 }
- 
+
 /**
  * Lock features, components, and particular components of features.
  */
-function features_lock_main_lock_features() {
+function feature_lock_main_lock_features() {
   // Get all locks provided by hook_lock_features().
-  $all_locks = module_invoke_all('lock_features');
+  $all_locks = module_invoke_all('lock_feature');
 
   // Get defaul values.
   $feature_locked =  variable_get('features_feature_locked', array());
