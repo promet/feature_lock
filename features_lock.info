@@ -1,0 +1,6 @@
+name = Feature lock
+core = 7.x
+version = 7.x-1.x-dev
+description = Module for locking features/components.
+
+dependencies[] = drop_ship
