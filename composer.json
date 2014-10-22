@@ -1,0 +1,22 @@
+{
+  "name": "drupal/feature_lock",
+  "type": "drupal-module",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://static.drupal-packagist.org/v0.1.0"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:promet/drop_ship.git"
+    },
+    {
+      "type": "vcs",
+      "url": "git@github.com:promet/kw_manifests"
+    }
+  ],
+  "require": {
+    "drupal/drop_ship": "1.*",
+    "drupal/kw_manifests": "1.*"
+  }
+}
