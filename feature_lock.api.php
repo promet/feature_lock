@@ -4,7 +4,7 @@ properties for each element.
 
 example:
 @code
-  function mymodule_lock_features() {
+  function mymodule_lock_feature() {
     $lock = array(
       'features' => array('feature_machine_name_1', 'feature_machine_name_2'),
       'components' => array('component_variable_name_1', 'component_variable_name_2'),
