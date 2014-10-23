@@ -11,7 +11,7 @@
 function feature_lock_kw_manifests_info() {
   return array(
     'features_lock_components' => array(
-      'callback' => 'p2pi_search_main_lock_features',
+      'callback' => 'feature_lock_main_lock_features',
       'dependencies' => array(
         array(
           'module' => 'drop_ship',
