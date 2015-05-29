@@ -28,7 +28,7 @@ function feature_lock_kw_manifests_info() {
 function feature_lock_main_lock_features() {
   // Get all locks provided by hook_lock_features().
   $all_locks = module_invoke_all('lock_feature');
-  feature_lock_locks_features($all_locks);
+  feature_lock_lock_features($all_locks);
 }
 
 /**
