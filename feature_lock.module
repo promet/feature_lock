@@ -28,7 +28,29 @@ function feature_lock_kw_manifests_info() {
 function feature_lock_main_lock_features() {
   // Get all locks provided by hook_lock_features().
   $all_locks = module_invoke_all('lock_feature');
+  feature_lock_locks_features($all_locks);
+}
 
+/**
+ * Set the lock attribute on a features component or feature.
+ *
+ * You can set a lock on all components across all features, a full features
+ *   module, or a single component of a feature.
+ *
+ * @param array $locks
+ *   An array that is structured:
+ *   array(
+ *     'components' => array('global_component1', 'global_component2'),
+ *     'features' => array('name_of_features_module1', 'features_module2'),
+ *     'components_of_feature' => array(
+ *       'name_of_features_module3' => array(
+ *         'component1'=>TRUE,
+ *         'component2'=>TRUE,
+ *       )
+ *     )
+ *   )
+ */
+function feature_lock_lock_features($locks) {
   // Get defaul values.
   $feature_locked =  variable_get('features_feature_locked', array());
   $lock_f = $lock_c = array();
