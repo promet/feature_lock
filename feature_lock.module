@@ -55,7 +55,7 @@ function feature_lock_lock_features($locks) {
   $feature_locked =  variable_get('features_feature_locked', array());
   $lock_f = $lock_c = array();
 
-  foreach ($all_locks as $type => $value) {
+  foreach ($locks as $type => $value) {
     switch ($type) {
       // Lock components.
       case 'components':
